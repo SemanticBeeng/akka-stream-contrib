@@ -1,20 +1,18 @@
 organization := "com.typesafe.akka"
 name := "akka-stream-contrib"
 
-crossScalaVersions := Seq("2.13.0")
+crossScalaVersions := Seq("2.12.10", "2.13.0")
 scalaVersion := crossScalaVersions.value.head
 
-val AkkaVersion = "2.6.0"
-
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-stream" % AkkaVersion,
-  "com.typesafe.akka" %% "akka-stream-testkit" % AkkaVersion % Test,
-  "junit" % "junit" % "4.12" % Test, // Common Public License 1.0
-  "com.novocode" % "junit-interface" % "0.11" % Test, // BSD-like
-  "com.google.jimfs" % "jimfs" % "1.1" % Test, // ApacheV2
-  "org.scalatest" %% "scalatest" % "3.1.0" % Test, // ApacheV2
-  "org.scalamock" %% "scalamock" % "4.4.0" % Test, // ApacheV2
-  "com.miguno.akka" %% "akka-mock-scheduler" % "0.5.5" % Test // ApacheV2
+  "com.typesafe.akka" %% "akka-stream" % versions.akka,
+  "com.typesafe.akka" %% "akka-stream-testkit" % versions.akka % Test,
+  "junit" % "junit" % versions.junit % Test, // Common Public License 1.0
+  "com.novocode" % "junit-interface" % versions.junitIntf % Test, // BSD-like
+  "com.google.jimfs" % "jimfs" % versions.jimfs % Test, // ApacheV2
+  "org.scalatest" %% "scalatest" % versions.scalaTest % Test, // ApacheV2
+  "org.scalamock" %% "scalamock" % versions.scalaMock % Test, // ApacheV2
+  "com.miguno.akka" %% "akka-mock-scheduler" % versions.akkamocksch % Test // ApacheV2
 )
 
 organizationName := "Lightbend Inc."
