@@ -18,3 +18,9 @@ ext-lib-src/
 moquette_store.mapdb
 moquette_store.mapdb.p
 moquette_store.mapdb.t
+
+.bsp/
+project/.boot/
+project/.ivy/
+project/.sbtboot/
+
